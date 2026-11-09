@@ -69,6 +69,15 @@ instalada.
 
 ## Historial de versiones
 
+### 1.10.1
+
+- El FBX guardado solo lleva datos estándar de FBX, sin propiedades propias de myVisor3D (como ya
+  hacían GLB, USD y USDZ).
+  - El tamaño de los focos superficiales no se guarda en FBX (no tiene una propiedad estándar): al
+    abrirlo vuelven al tamaño por defecto. USD sí lo conserva.
+  - Un FBX guardado desde OBJ, glTF o USD guarda el metallic del material (y una roughness por
+    debajo de 0,2) como textura uniforme, para que se vea igual al abrirlo.
+
 ### 1.10.0
 
 - Abre modelos **glTF/GLB** (también comprimidos con Draco o meshopt) y **USD, USDA, USDC y
