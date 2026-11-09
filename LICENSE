@@ -1,0 +1,28 @@
+myVisor3D
+Copyright (c) 2026 PabloYT. Todos los derechos reservados.
+
+Este programa, su código fuente y su documentación son obra de su autor y están protegidos por las
+leyes de propiedad intelectual.
+
+Se permite instalar y usar myVisor3D en tus propios equipos.
+
+Salvo permiso previo y por escrito del autor, no se permite:
+
+  - copiar, redistribuir, publicar, vender, alquilar ni sublicenciar el programa o su código fuente;
+  - modificarlo, traducirlo ni crear obras derivadas a partir de él;
+  - descompilarlo, desensamblarlo ni aplicarle ingeniería inversa, salvo en la medida en que la ley
+    aplicable lo permita expresamente.
+
+Ver el código en GitHub o hacer un fork dentro de GitHub, si el repositorio es público, no concede
+ninguno de esos permisos fuera de lo que establecen las condiciones de uso de GitHub.
+
+El programa se entrega «tal cual», sin garantía de ningún tipo, expresa o implícita, incluidas las
+de comerciabilidad, idoneidad para un fin concreto y no infracción. En la medida máxima permitida por
+la ley, el autor no será responsable de ningún daño o perjuicio derivado del uso o de la
+imposibilidad de uso del programa.
+
+myVisor3D incluye componentes de terceros que se rigen por sus propias licencias (three.js y el SDK
+de WebView2 de Microsoft) y entornos HDRI de dominio público: consulta THIRD-PARTY-NOTICES.txt. Esta
+licencia no limita los derechos que esas licencias conceden sobre dichos componentes.
+
+Para pedir permisos: https://github.com/pabloY
