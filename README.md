@@ -3,8 +3,8 @@
 Visor ligero de modelos 3D para Windows, de **PabloYT**. Abre archivos **FBX**, **OBJ**,
 **glTF/GLB** y **USD/USDZ** con sus texturas PBR, reconoce los nombres de exportación de
 **Substance Painter** (incluidos los tiles **UDIM**) y permite ver el render final con los focos del
-archivo, cada mapa por separado o el mapa UV. Guarda nuevas versiones del modelo en FBX, GLB, USD o
-USDZ con las correcciones, sin cambiar su topología (salvo GLB, que solo admite triángulos).
+archivo, cada mapa por separado o el mapa UV. Guarda el modelo en FBX, OBJ, GLB, USD o USDZ con las
+correcciones, sin cambiar su topología (salvo GLB, que solo admite triángulos).
 Funciona sin conexión.
 
 ## Descargar
@@ -56,18 +56,36 @@ Algunas cosas que puedes hacer:
 - Ver el **render final** con los focos del archivo, sombras y entornos HDRI, o cada mapa por
   separado (Color base, Roughness, Normal, AO…) y el **mapa UV** con sus tiles UDIM.
 - Añadir focos y cambiar el tipo, la posición y la orientación de cada uno (`W` mover, `E` girar).
-- Ajustar cada mapa por material y tile UDIM, asignar otras imágenes (arrastrándolas encima o con
-  el botón derecho) y quitar mapas con el botón derecho.
+- Ajustar cada mapa por material y tile UDIM, cambiar la **repetición** y el **giro** de las texturas
+  de cada tile, asignar otras imágenes (arrastrándolas encima o con el botón derecho) y quitar mapas
+  con el botón derecho.
 - Reparar la geometría (soldar vértices, normales) y desplazar la superficie con el mapa Height.
-- **Guardar** (`Ctrl+S`) una nueva versión en FBX, GLB, USD o USDZ, en una subcarpeta junto al
-  modelo, con las correcciones de geometría (los mismos polígonos: los quads y n-gonos no se
+- **Guardar** (`Ctrl+S`) el modelo en FBX, OBJ, GLB, USD o USDZ, con el nombre y en la carpeta que
+  elijas, con las correcciones de geometría (los mismos polígonos: los quads y n-gonos no se
   triangulan, salvo en GLB, que solo admite triángulos y lo avisa), los focos y las texturas
-  cambiadas, que se aplican solas al abrirla.
+  cambiadas. Solo se guardan las texturas que usa el modelo.
 
 Los atajos de teclado están al final del panel lateral, y la sección **Versión** indica la versión
 instalada.
 
 ## Historial de versiones
+
+### 1.10.2
+
+- **Repetición** y **Giro** de las texturas, independientes para cada material y tile UDIM (en la
+  sección Texturas, debajo de los sliders de los mapas). Al guardar se aplican a las texturas, así
+  que el archivo se ve igual en cualquier programa.
+- **Guardar** abre el diálogo «Guardar como»: eliges el nombre, la carpeta y el formato. Ya no se
+  crea una subcarpeta para cada versión.
+- Solo se guardan las texturas que usa el modelo, no las demás que hubiera en su carpeta:
+  - FBX y OBJ: el archivo y la carpeta `texturas`.
+  - USD: solo el archivo (usa las texturas del modelo donde están; si hay texturas nuevas, avisa y
+    las guarda en `texturas`).
+  - GLB y USDZ: solo el archivo, con las texturas dentro.
+  - Si guardas en la carpeta del modelo, las texturas nuevas llevan delante el nombre del archivo y
+    nunca se sobrescribe una textura del modelo.
+- Nuevo formato de guardado **OBJ + MTL**, con los mismos polígonos (OBJ no tiene focos: no se
+  guardan).
 
 ### 1.10.1
 
