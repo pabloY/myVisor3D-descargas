@@ -3,7 +3,8 @@
 Visor ligero de modelos 3D para Windows, de **PabloYT**. Abre archivos **FBX** y **OBJ** con sus
 texturas PBR, reconoce los nombres de exportación de **Substance Painter** (incluidos los tiles
 **UDIM**) y permite ver el render final con los focos del archivo, cada mapa por separado o el
-mapa UV. Funciona sin conexión.
+mapa UV. Guarda nuevas versiones del modelo en FBX con las correcciones, sin cambiar su topología.
+Funciona sin conexión.
 
 ## Descargar
 
@@ -56,10 +57,132 @@ Algunas cosas que puedes hacer:
 - Cambiar el tipo, la posición y la orientación de cada foco (`W` mover, `E` girar).
 - Ajustar cada mapa por material y tile UDIM, arrastrar imágenes encima para probar otras texturas
   y quitar mapas con el botón derecho.
-- Reparar normales, desplazar la superficie con el mapa Height y guardar una copia en OBJ + MTL.
+- Reparar la geometría (soldar vértices, normales) y desplazar la superficie con el mapa Height.
+- **Guardar** (`Ctrl+S`) una nueva versión en FBX, en una subcarpeta junto al modelo, con las
+  correcciones de geometría (los mismos polígonos: los quads y n-gonos no se triangulan), los cambios
+  de los focos y las texturas cambiadas, que se aplican solas al abrirla.
 
 Los atajos de teclado están al final del panel lateral, y la sección **Versión** indica la versión
 instalada.
+
+## Historial de versiones
+
+### 1.9.0
+
+- Botón **Guardar** junto a Abrir (`Ctrl+S`): crea una nueva versión del modelo en FBX, también si
+  el original es OBJ, en una subcarpeta junto a él (`modelo_v01\modelo_v01.fbx`, `modelo_v02`…).
+  El original no se modifica.
+  - Correcciones de geometría **sin cambiar la topología**: los mismos polígonos, en el mismo orden
+    y con los mismos vértices (quads y n-gonos incluidos); solo cambian las posiciones de los
+    vértices corregidos y las normales. El archivo guardado se vuelve a leer para comprobarlo.
+  - Cambios de los focos: tipo, posición, orientación, color, intensidad, tamaño y encendido.
+  - Copia de las texturas y, en `texturas\cambios`, las texturas cambiadas (mapas arrastrados o
+    quitados, valores de los sliders) con su nombre, para que se apliquen solas al abrir la versión.
+  - El desplazamiento y el teselado no se guardan.
+- Cada archivo se abre con todos los ajustes y sliders en su posición por defecto; el programa ya no
+  recuerda el estado de cada modelo.
+- Soldar vértices ya no puede separar vértices que estaban unidos (abría grietas con distancias
+  grandes).
+- Los polígonos degenerados (vértices repetidos o alineados) de un FBX conservan todas sus esquinas.
+- Los spots y focos direccionales del FBX ya no aparecen desplazados una unidad.
+- Sustituye al antiguo «Guardar…» en OBJ + MTL de Reparar geometría.
+
+### 1.8.0
+
+- Sección **Versión** en el panel, con la versión, el autor y las licencias.
+- Licencia («Todos los derechos reservados») y avisos de terceros junto al programa.
+- Primera versión publicada en este repositorio.
+
+### 1.7.0
+
+- Quitar mapas con el botón derecho: en todo el modelo (lista de mapas) o en un tile UDIM concreto
+  (vista UV). Lo quitado usa el valor uniforme de su slider; **Deshacer** vuelve a los del archivo.
+
+### 1.6.1
+
+- Opción **Invertir** del desplazamiento (escala de grises del mapa Height invertida).
+
+### 1.6.0
+
+- Sliders de los mapas por material y tile UDIM, con la opción **Todos**.
+- Sin mapa, el slider da un valor gris uniforme (como un mapa de ese valor).
+- Slider **Metallic**.
+- Un tile UDIM que falta usa los valores del material.
+
+### 1.5.0
+
+- Cada foco puede cambiar de tipo (direccional, puntual, spot o superficial) y moverse y girarse con
+  gizmos (`W` mover, `E` girar, `Q` quitar el gizmo, `Esc` soltar).
+- Slider **Intensidad sombras**.
+- El slider Roughness multiplica el mapa (0 a ×10).
+
+### 1.4.3
+
+- Corregida la sombra en forma de anillo de algunos objetos.
+
+### 1.4.2
+
+- Casilla para encender o apagar cada foco de la escena.
+
+### 1.4.1
+
+- Los sliders de los mapas pasan a la sección Texturas.
+
+### 1.4.0
+
+- Sliders Height/Bump, Roughness, Specular, Emisivo y Opacidad.
+- El mapa Specular se usa en el render final.
+- Las texturas empaquetadas soltadas sobre Render final (ORM, MetallicRoughness, MaskMap…) se
+  reparten solas en AO, Roughness y Metallic.
+
+### 1.3.3
+
+- Slider **AO** para suavizar o intensificar la oclusión ambiental.
+
+### 1.3.2
+
+- Temperatura de color e intensidad de cada foco de la escena (también la luz ambiente).
+- Slider **Normal** para el relieve del mapa de normales.
+- Al abrir un archivo, la cámara empieza encuadrada con un objetivo de 50°.
+
+### 1.3.1
+
+- Una imagen soltada en un tile de un material sin UDIM solo afecta a ese tile.
+
+### 1.3.0
+
+- Vistas Perspectiva, Planta, Alzado y Perfil con indicador de ejes.
+- Punto de pivote con gizmo y opción de orbitar alrededor de él.
+- Desplazamiento con el mapa Height y teselado.
+- Guardar una nueva versión en OBJ + MTL con las correcciones.
+- Soltar una imagen sobre un tile de la vista UV la aplica solo a ese tile.
+- Barra superior con Información, Rejilla, Doble cara y eje vertical.
+
+### 1.2.0
+
+- Sección **Reparar geometría**: soldar vértices, suavizado por ángulo y normales por polígono o
+  por grupo de suavizado.
+- Arrastrar una imagen sobre un mapa para usarla en su lugar.
+- Casillas independientes para los focos de la escena (`L`) y el HDRI (`H`).
+- La rueda del ratón cambia el ángulo de visión del objetivo.
+- HDRI incluidos en el instalador y en el portable.
+
+### 1.1.0
+
+- Iluminación con HDRI desde la carpeta `HDRI` del programa.
+- Movimiento por la escena con `W` `A` `S` `D` `Q` `E`.
+- Las listas desplegables se recorren con la rueda o con las flechas.
+
+### 1.0.1
+
+- Texturas de las mallas sin material (set `DefaultMaterial` de Substance Painter).
+- Mejor elección automática del set de texturas.
+- El visor no accede a la red.
+
+### 1.0.0
+
+- Primera versión: render final PBR con los focos del archivo, mapas individuales, texturas de
+  Substance Painter con tiles UDIM, vista del mapa UV e instalador con «Abrir con myVisor3D».
 
 ## Licencia
 

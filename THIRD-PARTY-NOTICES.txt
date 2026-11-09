@@ -9,8 +9,8 @@ licencias. Sus textos se reproducen tal como los publican sus autores. La licenc
 1. three.js (r170)
 ------------------
 https://threejs.org — Licencia MIT.
-Va incluido en el programa. web/src/vendor/FBXLoader.js es una copia modificada del FBXLoader de
-three.js, bajo la misma licencia.
+Va incluido en el programa. web/src/vendor/FBXLoader.js y web/src/vendor/OBJLoader.js son copias
+modificadas del FBXLoader y el OBJLoader de three.js, bajo la misma licencia.
 
 The MIT License
 
