@@ -1,9 +1,10 @@
 # myVisor3D
 
-Visor ligero de modelos 3D para Windows, de **PabloYT**. Abre archivos **FBX** y **OBJ** con sus
-texturas PBR, reconoce los nombres de exportación de **Substance Painter** (incluidos los tiles
-**UDIM**) y permite ver el render final con los focos del archivo, cada mapa por separado o el
-mapa UV. Guarda nuevas versiones del modelo en FBX con las correcciones, sin cambiar su topología.
+Visor ligero de modelos 3D para Windows, de **PabloYT**. Abre archivos **FBX**, **OBJ**,
+**glTF/GLB** y **USD/USDZ** con sus texturas PBR, reconoce los nombres de exportación de
+**Substance Painter** (incluidos los tiles **UDIM**) y permite ver el render final con los focos del
+archivo, cada mapa por separado o el mapa UV. Guarda nuevas versiones del modelo en FBX, GLB, USD o
+USDZ con las correcciones, sin cambiar su topología (salvo GLB, que solo admite triángulos).
 Funciona sin conexión.
 
 ## Descargar
@@ -21,8 +22,8 @@ WebView2, que ya viene con Windows 11 y con Windows 10 actualizado; si faltara, 
 ## Instalar
 
 1. Descarga el instalador y ábrelo. Se instala solo para tu usuario y puedes elegir:
-   - **«Abrir con myVisor3D»** en el menú contextual del Explorador para los `.fbx` y `.obj`
-     (no cambia tu programa predeterminado);
+   - **«Abrir con myVisor3D»** en el menú contextual del Explorador para los modelos 3D (`.fbx`,
+     `.obj`, `.glb`, `.gltf`, `.usd`, `.usdz`…; no cambia tu programa predeterminado);
    - accesos directos en el menú Inicio y en el escritorio.
 2. **Aviso de Windows.** El instalador no tiene firma digital, así que es normal que:
    - el navegador pregunte si quieres conservar el archivo: elige **Conservar**;
@@ -40,7 +41,7 @@ cada versión) con la que da PowerShell: `Get-FileHash .\myVisor3D-Setup-v<versi
 
    ```
    MiModelo/
-   ├── personaje.fbx          (o .obj + .mtl)
+   ├── personaje.fbx          (o .obj + .mtl, .glb, .gltf, .usd, .usdz)
    └── texturas/
        ├── Cuerpo_BaseColor.1001.png
        ├── Cuerpo_Roughness.1001.png
@@ -54,18 +55,35 @@ Algunas cosas que puedes hacer:
 
 - Ver el **render final** con los focos del archivo, sombras y entornos HDRI, o cada mapa por
   separado (Color base, Roughness, Normal, AO…) y el **mapa UV** con sus tiles UDIM.
-- Cambiar el tipo, la posición y la orientación de cada foco (`W` mover, `E` girar).
-- Ajustar cada mapa por material y tile UDIM, arrastrar imágenes encima para probar otras texturas
-  y quitar mapas con el botón derecho.
+- Añadir focos y cambiar el tipo, la posición y la orientación de cada uno (`W` mover, `E` girar).
+- Ajustar cada mapa por material y tile UDIM, asignar otras imágenes (arrastrándolas encima o con
+  el botón derecho) y quitar mapas con el botón derecho.
 - Reparar la geometría (soldar vértices, normales) y desplazar la superficie con el mapa Height.
-- **Guardar** (`Ctrl+S`) una nueva versión en FBX, en una subcarpeta junto al modelo, con las
-  correcciones de geometría (los mismos polígonos: los quads y n-gonos no se triangulan), los cambios
-  de los focos y las texturas cambiadas, que se aplican solas al abrirla.
+- **Guardar** (`Ctrl+S`) una nueva versión en FBX, GLB, USD o USDZ, en una subcarpeta junto al
+  modelo, con las correcciones de geometría (los mismos polígonos: los quads y n-gonos no se
+  triangulan, salvo en GLB, que solo admite triángulos y lo avisa), los focos y las texturas
+  cambiadas, que se aplican solas al abrirla.
 
 Los atajos de teclado están al final del panel lateral, y la sección **Versión** indica la versión
 instalada.
 
 ## Historial de versiones
+
+### 1.10.0
+
+- Abre modelos **glTF/GLB** (también comprimidos con Draco o meshopt) y **USD, USDA, USDC y
+  USDZ**, con sus texturas (también las que van dentro del archivo) y sus focos.
+- **Guardar** en **FBX, GLB, USD o USDZ**, eligiendo el formato en la lista junto al botón (de entrada,
+  el del archivo abierto). GLB y USDZ son un solo archivo con las texturas dentro.
+  - FBX, USD y USDZ guardan los mismos polígonos (quads y n-gonos incluidos).
+  - **GLB solo admite triángulos**: si el modelo tiene quads o n-gonos, avisa antes de guardar y los
+    guarda triangulados.
+  - GLB, USD y USDZ solo llevan datos estándar de su formato.
+- **Añadir foco** y **Quitar foco** en Iluminación: focos nuevos que se ajustan como los demás y se
+  guardan con la versión.
+- **Asignar mapa…** con el botón derecho sobre cada mapa de la lista y sobre cada tile UDIM de la
+  vista UV: elige una imagen y se asigna igual que si se arrastrara encima.
+- «Abrir con myVisor3D» también para los `.glb`, `.gltf`, `.usd`, `.usda`, `.usdc` y `.usdz`.
 
 ### 1.9.0
 
@@ -190,8 +208,9 @@ Copyright (c) 2026 PabloYT. **Todos los derechos reservados.** Puedes instalar y
 no está permitido copiarlo, redistribuirlo, modificarlo ni venderlo sin permiso por escrito del
 autor. Consulta [LICENSE](LICENSE).
 
-myVisor3D usa componentes de terceros con sus propias licencias: three.js (MIT), el SDK de
-WebView2 de Microsoft y entornos HDRI de Poly Haven (CC0). Detalles en
+myVisor3D usa componentes de terceros con sus propias licencias: three.js (MIT), los
+decodificadores Draco (Apache 2.0) y meshoptimizer (MIT), el SDK de WebView2 de Microsoft y entornos
+HDRI de Poly Haven (CC0). Detalles en
 [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
 
 Este repositorio solo contiene las descargas; el código fuente no es público.
