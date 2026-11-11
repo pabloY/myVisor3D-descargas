@@ -1,13 +1,36 @@
 myVisor3D — Avisos de terceros (Third-party notices)
 =====================================================
 
-myVisor3D incluye los componentes de terceros siguientes, que se distribuyen bajo sus propias
-licencias. Sus textos se reproducen tal como los publican sus autores. La licencia de myVisor3D
-(LICENSE.txt) no se aplica a estos componentes.
+Este archivo se distribuye con myVisor3D y se instala en la misma carpeta que myVisor3D.exe. Recoge
+los avisos de copyright y los textos de licencia de los componentes de terceros incluidos en el
+producto.
+
+myVisor3D es freeware con todos los derechos reservados (ver LICENSE.txt). Los componentes que se
+listan a continuación están sujetos a SUS PROPIAS licencias, que prevalecen sobre la de myVisor3D en
+lo que respecta a esos componentes.
 
 
-1. three.js (r170)
-------------------
+1. COMPONENTES INCLUIDOS Y UBICACIÓN DE SU LICENCIA
+---------------------------------------------------
+
+  Componente            Versión      Licencia       Texto de la licencia
+  --------------------  -----------  -------------  ---------------------
+  three.js              0.170.0      MIT            apartado 2 de este txt
+  Microsoft Edge        1.0.4258.31  BSD (tipo)     apartado 3 de este txt
+    WebView2 SDK
+  Decodificador Draco   -            Apache 2.0     apartado 4 de este txt
+  Decodificador         -            MIT            apartado 5 de este txt
+    meshoptimizer
+  HDRI de Poly Haven    -            CC0 1.0        apartado 6 de este txt
+
+THIRD-PARTY-NOTICES.txt y WebView2-NOTICE.txt se instalan junto a myVisor3D.exe, tanto en el
+instalador como en la versión portable (build.ps1 copia el primero y el NOTICE.txt del SDK de
+Microsoft como WebView2-NOTICE.txt). El aviso de copyright de three.js se conserva además dentro
+del propio ejecutable, en web/dist/app.js, que va empaquetado en el programa.
+
+
+2. three.js 0.170.0 (MIT)
+-------------------------
 https://threejs.org — Licencia MIT.
 Va incluido en el programa. web/src/vendor/FBXLoader.js y web/src/vendor/OBJLoader.js son copias
 modificadas del FBXLoader y el OBJLoader de three.js r170, y los archivos de web/src/vendor/usd/
@@ -37,8 +60,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-2. Microsoft Edge WebView2 SDK (1.0.4258.31)
---------------------------------------------
+3. Microsoft Edge WebView2 SDK 1.0.4258.31 (BSD de tipo)
+-------------------------------------------------------
 https://aka.ms/webview2
 Archivos: Microsoft.Web.WebView2.Core.dll, Microsoft.Web.WebView2.WinForms.dll y WebView2Loader.dll.
 Los avisos de los componentes de terceros que incluye el SDK están en WebView2-NOTICE.txt.
@@ -72,15 +95,15 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-3. Decodificador Draco (draco_wasm_wrapper.js y draco_decoder.wasm)
--------------------------------------------------------------------
+4. Decodificador Draco (draco_wasm_wrapper.js y draco_decoder.wasm) — Apache 2.0
+-------------------------------------------------------------------------------
 https://google.github.io/draco/ — Copyright Google LLC. Licencia Apache 2.0.
 Va incluido en el programa, sin modificar, tal como lo distribuye three.js
 (examples/jsm/libs/draco/gltf), para abrir los glTF comprimidos con Draco.
 
 
-4. Decodificador meshoptimizer (meshopt_decoder.module.js)
-----------------------------------------------------------
+5. Decodificador meshoptimizer (meshopt_decoder.module.js) — MIT
+----------------------------------------------------------------
 https://github.com/zeux/meshoptimizer — Licencia MIT.
 Va incluido en el programa, sin modificar, tal como lo distribuye three.js (examples/jsm/libs),
 para abrir los glTF comprimidos con meshopt.
@@ -108,8 +131,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-5. Entornos HDRI (carpeta HDRI)
--------------------------------
+6. Entornos HDRI (carpeta HDRI) — CC0 1.0
+-----------------------------------------
 Poly Haven — https://polyhaven.com
 Licencia CC0 1.0 Universal (dominio público): https://creativecommons.org/publicdomain/zero/1.0/
 No exige atribución; se cita por cortesía.
@@ -119,8 +142,8 @@ historic_cloister_passage, kloofendal_43d_clear, lauter_waterfall, meadow, mossy
 penguin_museum, small_cave, snowy_hillside_02 y sundowner_overlook (versiones de 2K en EXR).
 
 
-Texto de la licencia Apache 2.0 (decodificador Draco)
------------------------------------------------------
+7. Texto de la licencia Apache 2.0 (decodificador Draco)
+--------------------------------------------------------
 
                                  Apache License
                            Version 2.0, January 2004

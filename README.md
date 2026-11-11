@@ -31,8 +31,19 @@ WebView2, que ya viene con Windows 11 y con Windows 10 actualizado; si faltara, 
 
 Para desinstalarlo: *Configuración → Aplicaciones → myVisor3D → Desinstalar*.
 
-Si quieres comprobar que la descarga está completa, compara su huella SHA-256 (está en las notas de
-cada versión) con la que da PowerShell: `Get-FileHash .\myVisor3D-Setup-v<versión>.exe`.
+Si quieres comprobar que la descarga está completa, compara su huella SHA-256 con la que da
+PowerShell:
+
+```powershell
+Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
+```
+
+Las de la versión 1.10.3 son:
+
+```
+myVisor3D-Setup-v1.10.3.exe        b5e78a8b65a17fcd4ebe7a9a7646413dce1bda5933a5b3d759680fd70b3c36da
+myVisor3D-v1.10.3-win-x64.zip     8981e93e2e4ee1c30be1151354ff5500d86861e6a5ca4ec11bc65b641d85018f
+```
 
 ## Uso rápido
 
@@ -69,6 +80,17 @@ Los atajos de teclado están al final del panel lateral, y la sección **Versió
 instalada.
 
 ## Historial de versiones
+
+### 1.10.3
+
+- Versión de licencias y créditos: el programa no cambia, pero su licencia y sus avisos son ahora
+  los del resto de aplicaciones de **myApps**.
+- **Licencia freeware** completa en `LICENSE.txt`, dentro de la carpeta del programa y del
+  instalador.
+- **Avisos de terceros** (`THIRD-PARTY-NOTICES.txt`) con la tabla de cada componente incluido y su
+  versión.
+- Sección **Versión** del panel: versión, creador (**myApps** · pabloyt@gmail.com), autor y resumen
+  de licencias y componentes.
 
 ### 1.10.2
 
@@ -240,13 +262,19 @@ instalada.
 
 ## Licencia
 
-Copyright (c) 2026 PabloYT. **Todos los derechos reservados.** Puedes instalar y usar el programa;
-no está permitido copiarlo, redistribuirlo, modificarlo ni venderlo sin permiso por escrito del
-autor. Consulta [LICENSE](LICENSE).
+Copyright (c) 2026 PabloYT. **Freeware con todos los derechos reservados.**
 
-myVisor3D usa componentes de terceros con sus propias licencias: three.js (MIT), los
-decodificadores Draco (Apache 2.0) y meshoptimizer (MIT), el SDK de WebView2 de Microsoft y entornos
-HDRI de Poly Haven (CC0). Detalles en
+Puedes instalar y usar el programa; no está permitido copiarlo, redistribuirlo, modificarlo ni
+venderlo sin permiso por escrito del autor. Gratuito no significa libre: el texto completo está en
+[LICENSE](LICENSE).
+
+Dentro de la aplicación, la sección **Versión** del panel muestra la versión instalada, el creador
+(**myApps** · pabloyt@gmail.com), el autor y estos mismos avisos.
+
+myVisor3D usa componentes de terceros con sus propias licencias: three.js 0.170.0 (MIT, con copias
+modificadas de sus cargadores FBX, OBJ y USD), los decodificadores Draco (Apache 2.0) y meshoptimizer
+(MIT) que trae three.js, el SDK de WebView2 1.0.4258.31 de Microsoft (licencia de tipo BSD) y entornos
+HDRI de Poly Haven (CC0, dominio público). Detalles en
 [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
 
 Este repositorio solo contiene las descargas; el código fuente no es público.

@@ -1,28 +1,91 @@
-myVisor3D
+LICENCIA DE USO - FREEWARE
 Copyright (c) 2026 PabloYT. Todos los derechos reservados.
+(All rights reserved.)
 
-Este programa, su código fuente y su documentación son obra de su autor y están protegidos por las
-leyes de propiedad intelectual.
+myVisor3D se distribuye de forma GRATUITA como freeware. Gratuito no significa
+libre: el autor conserva la titularidad y todos los derechos de explotación.
 
-Se permite instalar y usar myVisor3D en tus propios equipos.
+1. CONCESIÓN DE USO
+   Se concede permiso, sin coste, para descargar, instalar y usar este programa
+   con fines personales o profesionales, en cualquier número de equipos propios.
 
-Salvo permiso previo y por escrito del autor, no se permite:
+2. RESTRICCIONES
+   Sin autorización previa y por escrito del autor, NO se permite:
+   a) modificar, adaptar, traducir o crear obras derivadas del programa;
+   b) vender, alquilar, sublicenciar o explotar comercialmente el programa,
+      ni incluirlo en productos o servicios de pago;
+   c) redistribuir, publicar o compartir el programa o sus archivos, salvo
+      mediante enlace a la página oficial de descarga;
+   d) retirar u ocultar los avisos de copyright, autoría o esta licencia;
+   e) usar el nombre o los logotipos del proyecto para promocionar productos
+      derivados sin permiso.
 
-  - copiar, redistribuir, publicar, vender, alquilar ni sublicenciar el programa o su código fuente;
-  - modificarlo, traducirlo ni crear obras derivadas a partir de él;
-  - descompilarlo, desensamblarlo ni aplicarle ingeniería inversa, salvo en la medida en que la ley
-    aplicable lo permita expresamente.
+3. INGENIERÍA INVERSA
+   No se permite descompilar, desensamblar ni aplicar ingeniería inversa al
+   programa, salvo en la medida en que la ley aplicable lo permita de forma
+   imperativa.
 
-Ver el código en GitHub o hacer un fork dentro de GitHub, si el repositorio es público, no concede
-ninguno de esos permisos fuera de lo que establecen las condiciones de uso de GitHub.
+4. TITULARIDAD
+   El programa, su código fuente, su diseño, su nombre, su icono y su
+   documentación son propiedad del autor. Esta licencia no transfiere ningún
+   derecho de propiedad intelectual; solo concede el derecho de uso descrito
+   en el punto 1.
 
-El programa se entrega «tal cual», sin garantía de ningún tipo, expresa o implícita, incluidas las
-de comerciabilidad, idoneidad para un fin concreto y no infracción. En la medida máxima permitida por
-la ley, el autor no será responsable de ningún daño o perjuicio derivado del uso o de la
-imposibilidad de uso del programa.
+5. COMPONENTES DE TERCEROS
+   El programa se distribuye junto a componentes de terceros con sus propias
+   licencias, que se conservan y prevalecen sobre esta:
+   - three.js (licencia MIT), con copias modificadas de sus cargadores FBX y
+     OBJ y de su cargador de USD
+   - Decodificador Draco (licencia Apache 2.0) y decodificador meshoptimizer
+     (licencia MIT), los que trae three.js para los glTF comprimidos
+   - SDK de WebView2 de Microsoft (licencia de tipo BSD)
+   - Entornos HDRI de Poly Haven (licencia CC0 1.0, dominio público)
+   Los textos completos de esas licencias se incluyen en la distribución, en
+   el archivo THIRD-PARTY-NOTICES.txt, instalado junto al ejecutable, y en
+   WebView2-NOTICE.txt para el SDK de Microsoft. Los avisos de copyright de
+   three.js se conservan además dentro del propio ejecutable.
 
-myVisor3D incluye componentes de terceros que se rigen por sus propias licencias (three.js y el SDK
-de WebView2 de Microsoft) y entornos HDRI de dominio público: consulta THIRD-PARTY-NOTICES.txt. Esta
-licencia no limita los derechos que esas licencias conceden sobre dichos componentes.
+6. SIN GARANTÍA
+   EL PROGRAMA SE ENTREGA "TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO,
+   EXPRESA O IMPLÍCITA, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS DE
+   COMERCIABILIDAD, IDONEIDAD PARA UN FIN CONCRETO Y NO INFRACCIÓN.
+   El uso del programa es responsabilidad exclusiva del usuario.
 
-Para pedir permisos: https://github.com/pabloY
+7. LIMITACIÓN DE RESPONSABILIDAD
+   En la máxima medida permitida por la ley, el autor no será responsable de
+   ningún daño directo, indirecto, incidental, especial o consecuente
+   (incluida la pérdida de datos, de beneficios o la interrupción de la
+   actividad) derivado del uso o de la imposibilidad de usar el programa,
+   incluso si se hubiera advertido de tal posibilidad.
+
+8. TERMINACIÓN
+   Esta licencia se extingue automáticamente si se incumple cualquiera de sus
+   condiciones. En tal caso deberá cesarse el uso y eliminarse todas las
+   copias del programa.
+
+9. ACEPTACIÓN
+   Instalar, ejecutar o utilizar el programa implica la aceptación de los
+   términos de esta licencia. Si no está de acuerdo, no utilice el programa.
+
+--------------------------------------------------------------------------
+SUMMARY (ENGLISH)
+
+myVisor3D is freeware, not free software. Copyright (c) 2026 PabloYT.
+All rights reserved.
+
+You may download, install and use this program free of charge for personal or
+professional purposes. You may NOT modify, create derivative works from, sell,
+rent, sublicense, redistribute, or commercially exploit the program, nor remove
+any copyright or authorship notice, without the author's prior written
+permission. Reverse engineering is prohibited except where mandatory law
+allows it. Third-party components (three.js, the Draco and meshoptimizer
+decoders, the Microsoft Edge WebView2 SDK and Poly Haven HDRI environments)
+remain under their own licenses, reproduced in THIRD-PARTY-NOTICES.txt and
+WebView2-NOTICE.txt.
+
+THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+
+--------------------------------------------------------------------------
+Contacto / Contact: pabloyt@gmail.com
