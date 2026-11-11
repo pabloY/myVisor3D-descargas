@@ -229,6 +229,15 @@ instalada.
 - Primera versión: render final PBR con los focos del archivo, mapas individuales, texturas de
   Substance Painter con tiles UDIM, vista del mapa UV e instalador con «Abrir con myVisor3D».
 
+## Creado por
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="marca/myApps-logo-oscuro.svg">
+  <img src="marca/myApps-logo-claro.svg" alt="myApps" height="56">
+</picture>
+
+**myApps** · pabloyt@gmail.com
+
 ## Licencia
 
 Copyright (c) 2026 PabloYT. **Todos los derechos reservados.** Puedes instalar y usar el programa;
