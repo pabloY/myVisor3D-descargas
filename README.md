@@ -10,11 +10,29 @@ Funciona sin conexión.
 
 ## Descargar
 
-**[⬇ Descargar la última versión](https://github.com/pabloY/myVisor3D-descargas/releases/latest)**
-y, en el apartado *Assets*, elige:
+**[Descargar la última versión](https://github.com/pabloY/myVisor3D-descargas/releases/latest)** y, en el apartado *Assets*, elige:
 
-- **`myVisor3D-Setup-v<versión>.exe`**: instalador (recomendado).
-- `myVisor3D-v<versión>-win-x64.zip`: versión portable; descomprímela y ejecuta `myVisor3D.exe`.
+- **`myVisor3D-Setup-v3.3.1.exe`**: instalador (recomendado). Se instala solo para tu usuario, sin permisos de administrador.
+- **`myVisor3D-v3.3.1-win-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myVisor3D.exe`; no instala nada.
+
+### Todas las versiones
+
+Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archivo directamente; las novedades de cada una están en el [historial de versiones](#historial-de-versiones). Las anteriores a la 1.8.0 no se publicaron como descarga.
+
+<!-- La tabla la genera publicacion\publicar.ps1 a partir de las versiones publicadas -->
+| Versión | Instalador | Portable | Notas |
+|---|---|---|---|
+| **3.3.1** (última) | [myVisor3D-Setup-v3.3.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.3.1/myVisor3D-Setup-v3.3.1.exe) | [myVisor3D-v3.3.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.3.1/myVisor3D-v3.3.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.3.1) |
+| 3.2.1 | [myVisor3D-Setup-v3.2.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.1/myVisor3D-Setup-v3.2.1.exe) | [myVisor3D-v3.2.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.1/myVisor3D-v3.2.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.2.1) |
+| 3.2.0 | [myVisor3D-Setup-v3.2.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.0/myVisor3D-Setup-v3.2.0.exe) | [myVisor3D-v3.2.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.0/myVisor3D-v3.2.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.2.0) |
+| 3.1.0 | [myVisor3D-Setup-v3.1.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.1.0/myVisor3D-Setup-v3.1.0.exe) | [myVisor3D-v3.1.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.1.0/myVisor3D-v3.1.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.1.0) |
+| 2.0.0 | [myVisor3D-Setup-v2.0.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v2.0.0/myVisor3D-Setup-v2.0.0.exe) | [myVisor3D-v2.0.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v2.0.0/myVisor3D-v2.0.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v2.0.0) |
+| 1.10.3 | [myVisor3D-Setup-v1.10.3.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.3/myVisor3D-Setup-v1.10.3.exe) | [myVisor3D-v1.10.3-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.3/myVisor3D-v1.10.3-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.3) |
+| 1.10.2 | [myVisor3D-Setup-v1.10.2.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.2/myVisor3D-Setup-v1.10.2.exe) | [myVisor3D-v1.10.2-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.2/myVisor3D-v1.10.2-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.2) |
+| 1.10.1 | [myVisor3D-Setup-v1.10.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.1/myVisor3D-Setup-v1.10.1.exe) | [myVisor3D-v1.10.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.1/myVisor3D-v1.10.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.1) |
+| 1.10.0 | [myVisor3D-Setup-v1.10.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.0/myVisor3D-Setup-v1.10.0.exe) | [myVisor3D-v1.10.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.0/myVisor3D-v1.10.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.0) |
+| 1.9.0 | [myVisor3D-Setup-v1.9.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.9.0/myVisor3D-Setup-v1.9.0.exe) | [myVisor3D-v1.9.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.9.0/myVisor3D-v1.9.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.9.0) |
+| 1.8.0 | [myVisor3D-Setup-v1.8.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.8.0/myVisor3D-Setup-v1.8.0.exe) | [myVisor3D-v1.8.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.8.0/myVisor3D-v1.8.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.8.0) |
 
 **Requisitos:** Windows 10 u 11 de 64 bits y una tarjeta gráfica con WebGL 2 (cualquiera de los
 últimos años). No hace falta ser administrador ni tener conexión a internet. Usa Microsoft Edge
@@ -36,7 +54,7 @@ Si quieres comprobar que la descarga está completa, compara su huella SHA-256 c
 PowerShell:
 
 ```powershell
-Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
+Get-FileHash .\myVisor3D-Setup-v3.3.1.exe -Algorithm SHA256
 ```
 
 Las de la versión 3.3.1 son:
