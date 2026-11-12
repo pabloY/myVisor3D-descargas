@@ -4,7 +4,8 @@ Visor ligero de modelos 3D para Windows, de **PabloYT**. Abre archivos **FBX**, 
 **glTF/GLB** y **USD/USDZ** con sus texturas PBR, reconoce los nombres de exportación de
 **Substance Painter** (incluidos los tiles **UDIM**) y permite ver el render final con los focos del
 archivo, cada mapa por separado o el mapa UV. Guarda el modelo en FBX, OBJ, GLB, USD o USDZ con las
-correcciones, sin cambiar su topología (salvo GLB, que solo admite triángulos).
+correcciones, sin cambiar su topología (salvo GLB, que solo admite triángulos), y lo exporta a
+**Arnold** (`.ass`); con **RayTracing** lo ve con trazado de rayos.
 Funciona sin conexión.
 
 ## Descargar
@@ -14,19 +15,6 @@ y, en el apartado *Assets*, elige:
 
 - **`myVisor3D-Setup-v<versión>.exe`**: instalador (recomendado).
 - `myVisor3D-v<versión>-win-x64.zip`: versión portable; descomprímela y ejecuta `myVisor3D.exe`.
-
-### Todas las versiones
-
-Todas las versiones publicadas aquí siguen disponibles. Cada enlace descarga el archivo directamente; las novedades de cada una están en el [historial de versiones](#historial-de-versiones). Las anteriores a la 1.8.0 no se publicaron como descarga.
-
-| Versión | Instalador | Portable | Notas |
-|---|---|---|---|
-| **1.10.3** (última) | [myVisor3D-Setup-v1.10.3.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.3/myVisor3D-Setup-v1.10.3.exe) | [myVisor3D-v1.10.3-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.3/myVisor3D-v1.10.3-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.3) |
-| 1.10.2 | [myVisor3D-Setup-v1.10.2.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.2/myVisor3D-Setup-v1.10.2.exe) | [myVisor3D-v1.10.2-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.2/myVisor3D-v1.10.2-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.2) |
-| 1.10.1 | [myVisor3D-Setup-v1.10.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.1/myVisor3D-Setup-v1.10.1.exe) | [myVisor3D-v1.10.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.1/myVisor3D-v1.10.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.1) |
-| 1.10.0 | [myVisor3D-Setup-v1.10.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.0/myVisor3D-Setup-v1.10.0.exe) | [myVisor3D-v1.10.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.10.0/myVisor3D-v1.10.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.10.0) |
-| 1.9.0 | [myVisor3D-Setup-v1.9.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.9.0/myVisor3D-Setup-v1.9.0.exe) | [myVisor3D-v1.9.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.9.0/myVisor3D-v1.9.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.9.0) |
-| 1.8.0 | [myVisor3D-Setup-v1.8.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.8.0/myVisor3D-Setup-v1.8.0.exe) | [myVisor3D-v1.8.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v1.8.0/myVisor3D-v1.8.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v1.8.0) |
 
 **Requisitos:** Windows 10 u 11 de 64 bits y una tarjeta gráfica con WebGL 2 (cualquiera de los
 últimos años). No hace falta ser administrador ni tener conexión a internet. Usa Microsoft Edge
@@ -51,11 +39,11 @@ PowerShell:
 Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
-Las de la versión 1.10.3 son:
+Las de la versión 2.0.0 son:
 
 ```
-myVisor3D-Setup-v1.10.3.exe        b5e78a8b65a17fcd4ebe7a9a7646413dce1bda5933a5b3d759680fd70b3c36da
-myVisor3D-v1.10.3-win-x64.zip     8981e93e2e4ee1c30be1151354ff5500d86861e6a5ca4ec11bc65b641d85018f
+myVisor3D-Setup-v2.0.0.exe        9ffed84a02a5fac9f90819a3d8fd12eb34bff8657d2c41624005a89296cb0285
+myVisor3D-v2.0.0-win-x64.zip      3cfa865743dced8ecb30c8f3753420b17355164ee8e784fd39809f446a87f915
 ```
 
 ## Uso rápido
@@ -84,15 +72,42 @@ Algunas cosas que puedes hacer:
   de cada tile, asignar otras imágenes (arrastrándolas encima o con el botón derecho) y quitar mapas
   con el botón derecho.
 - Reparar la geometría (soldar vértices, normales) y desplazar la superficie con el mapa Height.
-- **Guardar** (`Ctrl+S`) el modelo en FBX, OBJ, GLB, USD o USDZ, con el nombre y en la carpeta que
-  elijas, con las correcciones de geometría (los mismos polígonos: los quads y n-gonos no se
-  triangulan, salvo en GLB, que solo admite triángulos y lo avisa), los focos y las texturas
-  cambiadas. Solo se guardan las texturas que usa el modelo.
+- **Guardar** (`Ctrl+S`) el modelo en FBX, OBJ, GLB, USD, USDZ o **Arnold** (`.ass`), con el nombre
+y en la carpeta que elijas, con las correcciones de geometría (los mismos polígonos: los quads y
+n-gonos no se triangulan, salvo en GLB, que solo admite triángulos y lo avisa), los focos y las
+texturas cambiadas. Solo se guardan las texturas que usa el modelo.
+- Ver el modelo con **RayTracing** (`R`): trazado de rayos con los mismos materiales, focos y HDRI, con
+reflejos, refracciones y sombras físicas, acumulando muestras hasta el límite de muestras, tiempo o
+ruido que elijas.
+- **Exportar a Arnold** desde *Guardar como*: un material `standard_surface` por material y tile UDIM,
+los focos como luces físicas, el HDRI como `skydome_light` (colocado igual que en el visor), la cámara
+de la vista y las mallas con sus quads y n-gonos. Las texturas van a la carpeta `texturas` junto al
+archivo. Opcionalmente se renderiza con `kick` al guardar y se abre la imagen al terminar.
 
 Los atajos de teclado están al final del panel lateral, y la sección **Versión** indica la versión
 instalada.
 
 ## Historial de versiones
+
+### 2.0.0
+
+- **RayTracing** (botón de la barra o tecla `R`): la vista con trazado de rayos, con los mismos
+  materiales, focos y HDRI, y con reflejos, refracciones y sombras calculados por física. Acumula
+  muestras mientras no se mueve la cámara y se para por muestras, tiempo o nivel de ruido; se puede
+  bajar su resolución y filtrar los brillos. Los rebotes pueden ser los de la sección de Arnold, para
+  que la vista y el archivo exportado coincidan.
+- **Exportar a Arnold** (`.ass`) desde *Guardar como*: un material `standard_surface` por material y
+  tile UDIM, los focos convertidos a luces físicas (direccional, puntual, spot y superficial), el HDRI
+  como `skydome_light` (colocado igual que en el visor), la cámara de la vista con su ángulo y las
+  mallas con sus quads y n-gonos.
+  Opciones de render en la sección **Arnold (.ass)** (resolución, muestras de antialiasing y de cada
+  tipo de rayo, rebotes y *clamp*), y opcionalmente dos pruebas con menos muestras y una nota con los
+  comandos de Arnold.
+- **Renderizar con kick al guardar** (sección **Arnold (.ass)**): al guardar en Arnold se lanza `kick`
+  con la prueba baja, la media o el render final y, al terminar, se abre la imagen. `kick.exe` se busca
+  solo (PATH y las instalaciones de 3ds Max, Maya, Cinema 4D o el SDK de Arnold); si no aparece, se pide
+  que lo localices la primera vez y se recuerda.
+- Avisos de terceros: se añaden **three-gpu-pathtracer** y **three-mesh-bvh** (MIT).
 
 ### 1.10.3
 
@@ -285,9 +300,9 @@ Dentro de la aplicación, la sección **Versión** del panel muestra la versión
 (**myApps** · pabloyt@gmail.com), el autor y estos mismos avisos.
 
 myVisor3D usa componentes de terceros con sus propias licencias: three.js 0.170.0 (MIT, con copias
-modificadas de sus cargadores FBX, OBJ y USD), los decodificadores Draco (Apache 2.0) y meshoptimizer
-(MIT) que trae three.js, el SDK de WebView2 1.0.4258.31 de Microsoft (licencia de tipo BSD) y entornos
-HDRI de Poly Haven (CC0, dominio público). Detalles en
-[THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
+modificadas de sus cargadores FBX, OBJ y USD), three-gpu-pathtracer 0.0.23 y three-mesh-bvh 0.7.8
+(MIT, el trazado de rayos), los decodificadores Draco (Apache 2.0) y meshoptimizer (MIT) que trae
+three.js, el SDK de WebView2 1.0.4258.31 de Microsoft (licencia de tipo BSD) y entornos HDRI de Poly
+Haven (CC0, dominio público). Detalles en [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
 
 Este repositorio solo contiene las descargas; el código fuente no es público.

@@ -36,6 +36,8 @@ libre: el autor conserva la titularidad y todos los derechos de explotación.
    licencias, que se conservan y prevalecen sobre esta:
    - three.js (licencia MIT), con copias modificadas de sus cargadores FBX y
      OBJ y de su cargador de USD
+   - three-gpu-pathtracer y three-mesh-bvh (licencia MIT), los que usa el
+     trazado de rayos del modo RayTracing
    - Decodificador Draco (licencia Apache 2.0) y decodificador meshoptimizer
      (licencia MIT), los que trae three.js para los glTF comprimidos
    - SDK de WebView2 de Microsoft (licencia de tipo BSD)
@@ -43,7 +45,8 @@ libre: el autor conserva la titularidad y todos los derechos de explotación.
    Los textos completos de esas licencias se incluyen en la distribución, en
    el archivo THIRD-PARTY-NOTICES.txt, instalado junto al ejecutable, y en
    WebView2-NOTICE.txt para el SDK de Microsoft. Los avisos de copyright de
-   three.js se conservan además dentro del propio ejecutable.
+   three.js, three-gpu-pathtracer y three-mesh-bvh se conservan además
+   dentro del propio ejecutable.
 
 6. SIN GARANTÍA
    EL PROGRAMA SE ENTREGA "TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO,
@@ -78,10 +81,10 @@ professional purposes. You may NOT modify, create derivative works from, sell,
 rent, sublicense, redistribute, or commercially exploit the program, nor remove
 any copyright or authorship notice, without the author's prior written
 permission. Reverse engineering is prohibited except where mandatory law
-allows it. Third-party components (three.js, the Draco and meshoptimizer
-decoders, the Microsoft Edge WebView2 SDK and Poly Haven HDRI environments)
-remain under their own licenses, reproduced in THIRD-PARTY-NOTICES.txt and
-WebView2-NOTICE.txt.
+allows it. Third-party components (three.js, three-gpu-pathtracer,
+three-mesh-bvh, the Draco and meshoptimizer decoders, the Microsoft Edge
+WebView2 SDK and Poly Haven HDRI environments) remain under their own
+licenses, reproduced in THIRD-PARTY-NOTICES.txt and WebView2-NOTICE.txt.
 
 THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
