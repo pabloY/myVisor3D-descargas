@@ -39,11 +39,11 @@ PowerShell:
 Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
-Las de la versión 3.2.1 son:
+Las de la versión 3.3.1 son:
 
 ```
-myVisor3D-Setup-v3.2.1.exe        0a6b6abf0e8ac36d4c34103f5d5405be7d12b3debb0b9e979e91fb953c818c73
-myVisor3D-v3.2.1-win-x64.zip      8bf708c53f923877627b6aba890fab4558ff3f57f38f7110290487df65cce253
+myVisor3D-Setup-v3.3.1.exe        fbeed877c90cdc30790b5993f08dd8a46fe47cdc39d0be7c7be68ddb50223f5d
+myVisor3D-v3.3.1-win-x64.zip      bce4709db65fe81ed0626b755dc6e14ba94fd317874246b2bd1e7915d245a0a8
 ```
 
 ## Uso rápido
@@ -88,6 +88,49 @@ Los atajos de teclado están al final del panel lateral, y la sección **Versió
 instalada.
 
 ## Historial de versiones
+
+### 3.3.1
+
+- **Postprocesado** (sección nueva), como en el visor de Substance Painter o el de Arnold:
+  - **Viñeteado**: cantidad y radio.
+  - **Desenfoque** (profundidad de campo): apertura de la lente y distancia de enfoque, con un botón
+    para enfocar con un clic en el modelo. En RayTracing lo calcula la lente de la cámara del trazador.
+  - **Grano**: cantidad, radio (tamaño) y tipo, coloreado o en escala de grises.
+  - Se ve en la vista, en RayTracing y en las capturas.
+
+### 3.3.0
+
+- **Captura** (botón de la cámara en la barra superior, o tecla C): guarda una imagen de la vista en PNG
+  o JPEG a la resolución que elijas (tamaño de la vista, ×2, ×4, HD, Full HD, QHD, 4K, 8K, cuadradas,
+  verticales o personalizada). La vista se vuelve a dibujar a ese tamaño; con RayTracing activo, el
+  trazado se vuelve a calcular a ese tamaño con las muestras y el tiempo que elijas.
+- **Panel:** todas las secciones (también Mapas) empiezan cerradas al abrir el programa.
+- **Barra superior:** los botones muestran solo el icono; el nombre y el atajo salen al dejar el ratón encima. **Doble cara** está activada por defecto.
+- **Texturas:** el slider Height/Bump multiplica las alturas: ×1 el mapa tal cual (por defecto), ×0 gris
+  medio sin relieve, ×−1 alturas invertidas, y llega de ×−5 a ×5. Antes −1 dejaba el mapa plano.
+- **Texturas:** nueva opción **Mapa Height**: no actúa, *tipo normal* (sombras y brillos que dan volumen,
+  sumados al mapa normal si lo hay) o *parallax*. Antes el Height no hacía nada si había mapa normal.
+- **Texturas:** casilla **Inv.** junto a los sliders Height y AO para invertir el mapa.
+- La sección «Desplazamiento» pasa a llamarse **Displacement & Tessellation**.
+- **Instalador:** nueva opción para abrir directamente con myVisor3D los modelos 3D (doble clic). Si ya
+  tenías otro programa elegido para alguna extensión, ofrece abrir Configuración para cambiarlo, porque
+  Windows no deja hacerlo desde un instalador. Al desinstalar, cada extensión vuelve a su programa anterior.
+- **Texturas:** el slider AO también oscurece la luz difusa de los focos (antes solo la del HDRI y la
+  ambiente), así que su efecto se nota con cualquier iluminación. En RayTracing el mapa AO, con su
+  ajuste, oscurece el color base.
+- **Mapas:**
+  - Un clic en el punto verde de cada mapa lo apaga y lo enciende (en la vista, en RayTracing y al
+    guardar), sin perder nada.
+  - El Ambient occlusion se puede arrastrar sobre otro mapa aunque el modelo no lo tenga: se calcula
+    desde el Height o el Normal.
+  - Al copiar un mapa sobre otro, el resultado se ve en el visor mientras se mueven las opciones.
+  - Normal a Height ya no deja un patrón de rayas diagonales.
+  - Se puede arrastrar un mapa sobre otro para copiarlo, convertido al tipo del destino: color a gris
+    (gris, R, G o B), gris o color a normal (como Height), normal a Height, y Height o Normal a Ambient
+    occlusion. Se usa el mapa con los ajustes de la sección Texturas.
+  - «Cuadrícula UV / tiles» y «Normales de la malla» van al final de la lista, separadas de los mapas.
+- **RayTracing:** al terminar, las muestras, el tiempo y el ruido se siguen viendo aunque se mueva la
+  cámara, hasta que se vuelve a calcular.
 
 ### 3.2.1
 
