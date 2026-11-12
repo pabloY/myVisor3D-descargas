@@ -39,11 +39,11 @@ PowerShell:
 Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
-Las de la versión 3.2.0 son:
+Las de la versión 3.2.1 son:
 
 ```
-myVisor3D-Setup-v3.2.0.exe        8951f00ec4eeaf59e5fc6b1c7767c63dc33653c7a360c7cbe128c045b89d1981
-myVisor3D-v3.2.0-win-x64.zip      529ee7142f33f3439ebde856dad70039e6fc030821ca4c260834d6d5445712b6
+myVisor3D-Setup-v3.2.1.exe        0a6b6abf0e8ac36d4c34103f5d5405be7d12b3debb0b9e979e91fb953c818c73
+myVisor3D-v3.2.1-win-x64.zip      8bf708c53f923877627b6aba890fab4558ff3f57f38f7110290487df65cce253
 ```
 
 ## Uso rápido
@@ -88,6 +88,11 @@ Los atajos de teclado están al final del panel lateral, y la sección **Versió
 instalada.
 
 ## Historial de versiones
+
+### 3.2.1
+
+- **RayTracing:** se para a los 15 segundos por defecto y usa sus propios rebotes, 2, 2 y 2
+  (la casilla «Rebotes», que copia los de Arnold, viene desmarcada).
 
 ### 3.2.0
 
