@@ -10,14 +10,17 @@ Funciona sin conexión.
 
 ## Descargar
 
-**[Descargar la última versión](https://github.com/pabloY/myVisor3D-descargas/releases/latest)** y, en el apartado *Assets*, elige:
+**[⬇ Descargar la última versión](https://github.com/pabloY/myVisor3D-descargas/releases/latest)**
+y, en el apartado *Assets*, elige:
 
-- **`myVisor3D-Setup-v3.3.1.exe`**: instalador (recomendado). Se instala solo para tu usuario, sin permisos de administrador.
-- **`myVisor3D-v3.3.1-win-x64.zip`**: versión **portable**. Descomprime el ZIP y ejecuta `myVisor3D.exe`; no instala nada.
+- **`myVisor3D-Setup-v<versión>.exe`**: instalador (recomendado).
+- `myVisor3D-v<versión>-win-x64.zip`: versión portable; descomprímela y ejecuta `myVisor3D.exe`.
 
 ### Todas las versiones
 
-Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archivo directamente; las novedades de cada una están en el [historial de versiones](#historial-de-versiones). Las anteriores a la 1.8.0 no se publicaron como descarga.
+Todas las versiones publicadas siguen disponibles. Cada enlace descarga el archivo directamente;
+las novedades de cada una están en el [historial de versiones](#historial-de-versiones). Las
+anteriores a la 1.8.0 no se publicaron como descarga.
 
 <!-- La tabla la genera publicacion\publicar.ps1 a partir de las versiones publicadas -->
 | Versión | Instalador | Portable | Notas |
@@ -54,7 +57,7 @@ Si quieres comprobar que la descarga está completa, compara su huella SHA-256 c
 PowerShell:
 
 ```powershell
-Get-FileHash .\myVisor3D-Setup-v3.3.1.exe -Algorithm SHA256
+Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
 Las de la versión 3.3.1 son:
