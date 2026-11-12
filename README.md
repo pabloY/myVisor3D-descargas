@@ -39,11 +39,11 @@ PowerShell:
 Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
-Las de la versión 2.0.0 son:
+Las de la versión 3.1.0 son:
 
 ```
-myVisor3D-Setup-v2.0.0.exe        9ffed84a02a5fac9f90819a3d8fd12eb34bff8657d2c41624005a89296cb0285
-myVisor3D-v2.0.0-win-x64.zip      3cfa865743dced8ecb30c8f3753420b17355164ee8e784fd39809f446a87f915
+myVisor3D-Setup-v3.1.0.exe        1368b36ca7cfb097b9c9aaf270de8abca64864dbc0e0edd36995da9fdabdbbdb
+myVisor3D-v3.1.0-win-x64.zip      abf05f008fd8094768eaa51252de05c155e626ee42ea194aa7b37d53880cc66d
 ```
 
 ## Uso rápido
@@ -72,7 +72,7 @@ Algunas cosas que puedes hacer:
   de cada tile, asignar otras imágenes (arrastrándolas encima o con el botón derecho) y quitar mapas
   con el botón derecho.
 - Reparar la geometría (soldar vértices, normales) y desplazar la superficie con el mapa Height.
-- **Guardar** (`Ctrl+S`) el modelo en FBX, OBJ, GLB, USD, USDZ o **Arnold** (`.ass`), con el nombre
+- **Guardar** (`Ctrl+S`) el modelo en FBX, OBJ, GLB, USD, USDZ, **Arnold** (`.ass`) o **3ds Max** (`.max`, con 3ds Max instalado), con el nombre
 y en la carpeta que elijas, con las correcciones de geometría (los mismos polígonos: los quads y
 n-gonos no se triangulan, salvo en GLB, que solo admite triángulos y lo avisa), los focos y las
 texturas cambiadas. Solo se guardan las texturas que usa el modelo.
@@ -82,12 +82,39 @@ ruido que elijas.
 - **Exportar a Arnold** desde *Guardar como*: un material `standard_surface` por material y tile UDIM,
 los focos como luces físicas, el HDRI como `skydome_light` (colocado igual que en el visor), la cámara
 de la vista y las mallas con sus quads y n-gonos. Las texturas van a la carpeta `texturas` junto al
-archivo. Opcionalmente se renderiza con `kick` al guardar y se abre la imagen al terminar.
+archivo. El botón **Renderizar con kick** lo renderiza (CPU o GPU) y abre la imagen al terminar.
 
 Los atajos de teclado están al final del panel lateral, y la sección **Versión** indica la versión
 instalada.
 
 ## Historial de versiones
+
+### 3.1.0
+
+- **Guardar para 3ds Max** (`.max`), si tienes 3ds Max instalado. El archivo lleva:
+  - la geometría;
+  - materiales `ai_standard_surface` con sus texturas;
+  - la cámara de la vista;
+  - los focos como luces de Arnold (punto, direccional, spot o quad) con su intensidad y temperatura
+    de color;
+  - el HDRI como luz de cielo con un mapa Bitmap esférico y el mismo giro;
+  - Arnold como renderizador, con los ajustes de la sección Arnold.
+- **Botón «Renderizar con kick»** en la sección Arnold. Guardar en `.ass` ya no lanza el render.
+  - Eliges el nombre y la carpeta. Por defecto propone `render_arnold\<modelo>_01.ass`, con un número
+    que sube para no pisar renders anteriores.
+  - Renderiza en **CPU o GPU**.
+  - Antes de lanzar el render comprueba que la escena tenga luz que Arnold pueda usar, y lo explica si
+    no la hay.
+  - Si kick falla nada más empezar, se reintenta solo una vez.
+- **Formato de imagen** de Arnold: PNG, TIFF o EXR.
+- **Texturas:**
+  - Los ajustes de la sección Texturas se ven en el propio mapa.
+  - Al guardar se elige si se guardan con esos cambios o las texturas originales.
+- **Vista:**
+  - Arrastrar los ejes de la esquina gira la vista.
+  - Botón **Pivotar en punto de vista**.
+  - La rueda del ratón ajusta los sliders paso a paso.
+- **RayTracing:** el tiempo se para al terminar.
 
 ### 2.0.0
 
