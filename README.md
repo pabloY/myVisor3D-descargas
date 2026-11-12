@@ -39,11 +39,11 @@ PowerShell:
 Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
-Las de la versión 3.1.0 son:
+Las de la versión 3.2.0 son:
 
 ```
-myVisor3D-Setup-v3.1.0.exe        1368b36ca7cfb097b9c9aaf270de8abca64864dbc0e0edd36995da9fdabdbbdb
-myVisor3D-v3.1.0-win-x64.zip      abf05f008fd8094768eaa51252de05c155e626ee42ea194aa7b37d53880cc66d
+myVisor3D-Setup-v3.2.0.exe        8951f00ec4eeaf59e5fc6b1c7767c63dc33653c7a360c7cbe128c045b89d1981
+myVisor3D-v3.2.0-win-x64.zip      529ee7142f33f3439ebde856dad70039e6fc030821ca4c260834d6d5445712b6
 ```
 
 ## Uso rápido
@@ -88,6 +88,29 @@ Los atajos de teclado están al final del panel lateral, y la sección **Versió
 instalada.
 
 ## Historial de versiones
+
+### 3.2.0
+
+- **Focos con target:** los focos (salvo el puntual) apuntan a un target que se ve como un cuadradito
+  unido al foco por una línea. Se mueven el foco o el target con el gizmo y el foco se orienta solo.
+  Ya no hay gizmo de giro ni atajos W/E/Q para los focos.
+- **Texturas:**
+  - Nuevo bloque **Color base**: contraste, saturación, tono e intensidad (vibrance) del mapa de color
+    base. Se ve en la vista, en RayTracing y se guarda en las texturas.
+  - Repetición y giro van en un bloque separado del resto de sliders.
+  - Nuevo bloque **Transmisión**: cuánta luz atraviesa el material y de qué color. Va a Arnold y 3ds Max.
+  - Ayuda en «Usar color de vértices» sobre cuándo activarlo.
+- **Arnold:**
+  - Cada parámetro explica al dejar el ratón encima qué hace, cómo afecta a la imagen y al tiempo, con
+    ejemplos.
+  - Nuevos valores por defecto: AA 4 (máx. 20), sin adaptativo, 1 muestra por tipo, rebotes 2/2/8,
+    prueba media en GPU.
+- **3ds Max:** guarda y conecta todos los mapas que necesita (los cambiados, los arrastrados y los
+  creados desde un slider sin mapa), usa el dispositivo (CPU o GPU) de la sección Arnold, la
+  profundidad total de rebotes correcta y la imagen de salida en el formato elegido.
+- **Guardar:** propone siempre `_v01` (y `_01` en los renders de kick); solo sube el número si ya existe
+  un archivo con ese nombre y la misma extensión.
+- **RayTracing:** «Rebotes como en Arnold» pasa a llamarse «Rebotes».
 
 ### 3.1.0
 
