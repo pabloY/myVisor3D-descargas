@@ -25,7 +25,8 @@ anteriores a la 1.8.0 no se publicaron como descarga.
 <!-- La tabla la genera publicacion\publicar.ps1 a partir de las versiones publicadas -->
 | Versión | Instalador | Portable | Notas |
 |---|---|---|---|
-| **3.4.0** (última) | [myVisor3D-Setup-v3.4.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.4.0/myVisor3D-Setup-v3.4.0.exe) | [myVisor3D-v3.4.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.4.0/myVisor3D-v3.4.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.4.0) |
+| **3.5.1** (última) | [myVisor3D-Setup-v3.5.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.5.1/myVisor3D-Setup-v3.5.1.exe) | [myVisor3D-v3.5.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.5.1/myVisor3D-v3.5.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.5.1) |
+| 3.4.0 | [myVisor3D-Setup-v3.4.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.4.0/myVisor3D-Setup-v3.4.0.exe) | [myVisor3D-v3.4.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.4.0/myVisor3D-v3.4.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.4.0) |
 | 3.3.1 | [myVisor3D-Setup-v3.3.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.3.1/myVisor3D-Setup-v3.3.1.exe) | [myVisor3D-v3.3.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.3.1/myVisor3D-v3.3.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.3.1) |
 | 3.2.1 | [myVisor3D-Setup-v3.2.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.1/myVisor3D-Setup-v3.2.1.exe) | [myVisor3D-v3.2.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.1/myVisor3D-v3.2.1-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.2.1) |
 | 3.2.0 | [myVisor3D-Setup-v3.2.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.0/myVisor3D-Setup-v3.2.0.exe) | [myVisor3D-v3.2.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.2.0/myVisor3D-v3.2.0-win-x64.zip) | [Release](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.2.0) |
@@ -61,11 +62,11 @@ PowerShell:
 Get-FileHash .\myVisor3D-Setup-v<versión>.exe -Algorithm SHA256
 ```
 
-Las de la versión 3.4.0 son:
+Las de la versión 3.5.1 son:
 
 ```
-myVisor3D-Setup-v3.4.0.exe       aee3d7b9595fe7c5ec8a2780eb5dd8a8893e4da14f3133c848e8aa91984f4b11
-myVisor3D-v3.4.0-win-x64.zip     e57b7df8163aa288159bf03fea50fb52172c8e432f1da2c5b457eef5559efe37
+myVisor3D-Setup-v3.5.1.exe  1bc5cb5bfa9c097915e16956f5dd49beb84807585923c483b17b170af790f9b8
+myVisor3D-v3.5.1-win-x64.zip  93cb6ae3efa732e55cd4c6ed8d12a703ec8f47dab7dd29d54e0d9e9342bac1d8
 ```
 
 ## Uso rápido
@@ -110,6 +111,10 @@ Los atajos de teclado están al final del panel lateral, y la sección **Versió
 instalada.
 
 ## Historial de versiones
+
+### 3.5.1
+
+- Subdivisión suave en quads, aristas originales al iniciar y nuevos controles de configuración. [Notas completas](https://github.com/pabloY/myVisor3D-descargas/releases/tag/v3.5.1).
 
 ### 3.4.0
 
