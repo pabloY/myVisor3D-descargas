@@ -18,7 +18,7 @@ Se conserva la última revisión de cada versión (por ejemplo, la 3.5.3 de la s
 
 | Versión | Instalador | Portable |
 |---|---|---|
-| **4.2.5** (última) | [Setup-v4.2.5.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.2.5/myVisor3D-Setup-v4.2.5.exe) | [v4.2.5-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.2.5/myVisor3D-v4.2.5-win-x64.zip) |
+| **4.2.6** (última) | [Setup-v4.2.6.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.2.6/myVisor3D-Setup-v4.2.6.exe) | [v4.2.6-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.2.6/myVisor3D-v4.2.6-win-x64.zip) |
 | 4.1.0 | [Setup-v4.1.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.1.0/myVisor3D-Setup-v4.1.0.exe) | [v4.1.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.1.0/myVisor3D-v4.1.0-win-x64.zip) |
 | 4.0.1 | [Setup-v4.0.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.0.1/myVisor3D-Setup-v4.0.1.exe) | [v4.0.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.0.1/myVisor3D-v4.0.1-win-x64.zip) |
 | 3.6.0 | [Setup-v3.6.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.6.0/myVisor3D-Setup-v3.6.0.exe) | [v3.6.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v3.6.0/myVisor3D-v3.6.0-win-x64.zip) |
