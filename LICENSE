@@ -36,17 +36,19 @@ libre: el autor conserva la titularidad y todos los derechos de explotación.
    licencias, que se conservan y prevalecen sobre esta:
    - three.js (licencia MIT), con copias modificadas de sus cargadores FBX y
      OBJ y de su cargador de USD
-   - three-gpu-pathtracer y three-mesh-bvh (licencia MIT), los que usa el
-     trazado de rayos del modo RayTracing
+   - cycles_server.py, el script que el modo RayTracing ejecuta dentro de
+     Blender (que no se incluye: lo instala el usuario). Usa la API de
+     Blender y por eso se distribuye con la licencia GNU GPL 2.0 o posterior
+     (GPL-2.0-or-later), no con esta; el resto del programa solo se comunica
+     con Blender como proceso aparte
    - Decodificador Draco (licencia Apache 2.0) y decodificador meshoptimizer
      (licencia MIT), los que trae three.js para los glTF comprimidos
    - SDK de WebView2 de Microsoft (licencia de tipo BSD)
    - Entornos HDRI de Poly Haven (licencia CC0 1.0, dominio público)
    Los textos completos de esas licencias se incluyen en la distribución, en
    el archivo THIRD-PARTY-NOTICES.txt, instalado junto al ejecutable, y en
-   WebView2-NOTICE.txt para el SDK de Microsoft. Los avisos de copyright de
-   three.js, three-gpu-pathtracer y three-mesh-bvh se conservan además
-   dentro del propio ejecutable.
+   WebView2-NOTICE.txt para el SDK de Microsoft. El aviso de copyright de
+   three.js se conserva además dentro del propio ejecutable.
 
 6. SIN GARANTÍA
    EL PROGRAMA SE ENTREGA "TAL CUAL" (AS IS), SIN GARANTÍA DE NINGÚN TIPO,
@@ -81,10 +83,12 @@ professional purposes. You may NOT modify, create derivative works from, sell,
 rent, sublicense, redistribute, or commercially exploit the program, nor remove
 any copyright or authorship notice, without the author's prior written
 permission. Reverse engineering is prohibited except where mandatory law
-allows it. Third-party components (three.js, three-gpu-pathtracer,
-three-mesh-bvh, the Draco and meshoptimizer decoders, the Microsoft Edge
-WebView2 SDK and Poly Haven HDRI environments) remain under their own
-licenses, reproduced in THIRD-PARTY-NOTICES.txt and WebView2-NOTICE.txt.
+allows it. Third-party components (three.js, the Draco and meshoptimizer
+decoders, the Microsoft Edge WebView2 SDK and Poly Haven HDRI environments)
+remain under their own licenses, reproduced in THIRD-PARTY-NOTICES.txt and
+WebView2-NOTICE.txt. cycles_server.py, the script the RayTracing mode runs
+inside the user's own Blender (not included), uses the Blender API and is
+licensed under the GNU GPL 2.0 or later, not under this license.
 
 THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR

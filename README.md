@@ -18,7 +18,8 @@ Se conserva la última revisión de cada versión (por ejemplo, la 3.5.3 de la s
 
 | Versión | Instalador | Portable |
 |---|---|---|
-| **4.4.2** (última) | [Setup-v4.4.2.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.4.2/myVisor3D-Setup-v4.4.2.exe) | [v4.4.2-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.4.2/myVisor3D-v4.4.2-win-x64.zip) |
+| **4.5.0** (última) | [Setup-v4.5.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.5.0/myVisor3D-Setup-v4.5.0.exe) | [v4.5.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.5.0/myVisor3D-v4.5.0-win-x64.zip) |
+| 4.4.2 | [Setup-v4.4.2.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.4.2/myVisor3D-Setup-v4.4.2.exe) | [v4.4.2-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.4.2/myVisor3D-v4.4.2-win-x64.zip) |
 | 4.3.1 | [Setup-v4.3.1.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.3.1/myVisor3D-Setup-v4.3.1.exe) | [v4.3.1-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.3.1/myVisor3D-v4.3.1-win-x64.zip) |
 | 4.2.7 | [Setup-v4.2.7.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.2.7/myVisor3D-Setup-v4.2.7.exe) | [v4.2.7-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.2.7/myVisor3D-v4.2.7-win-x64.zip) |
 | 4.1.0 | [Setup-v4.1.0.exe](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.1.0/myVisor3D-Setup-v4.1.0.exe) | [v4.1.0-win-x64.zip](https://github.com/pabloY/myVisor3D-descargas/releases/download/v4.1.0/myVisor3D-v4.1.0-win-x64.zip) |
@@ -36,7 +37,9 @@ Se conserva la última revisión de cada versión (por ejemplo, la 3.5.3 de la s
 
 **Requisitos:** Windows 10 u 11 de 64 bits y una tarjeta gráfica con WebGL 2. No hace falta ser
 administrador ni tener conexión. Usa Microsoft Edge WebView2, que ya viene con Windows; si faltara,
-el programa lo avisa.
+el programa lo avisa. El **RayTracing** necesita además **Blender 4.2 o posterior** (gratuito; no viene
+con myVisor3D): renderiza con Cycles, con la tarjeta gráfica si puede. Si no está instalado, el programa
+ayuda a indicarlo o a instalarlo.
 
 ## Instalar
 
@@ -59,8 +62,8 @@ Cada versión incluye `SHA256SUMS.txt` con la huella de sus archivos, para compr
 
 Con el modelo abierto puedes ver el render final, cada mapa por separado o el mapa UV; añadir y
 mover focos; ajustar y sustituir texturas por material y tile UDIM; ver el modelo con
-**RayTracing** (`R`) y **guardar** (`Ctrl+S`) en FBX, OBJ, GLB, USD, USDZ, Arnold (`.ass`) o 3ds Max
-(`.max`). Los atajos de teclado están al final del panel lateral.
+**RayTracing** (`T`, con Cycles de Blender) y **guardar** (`Ctrl+S`) en FBX, OBJ, GLB, USD, USDZ, Arnold
+(`.ass`) o 3ds Max (`.max`). Los atajos de teclado están al final del panel lateral.
 
 ## Creado por
 
